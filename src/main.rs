@@ -1,4 +1,5 @@
 mod app;
+mod document;
 mod ui;
 
 // アプリを起動して終了時にターミナルを元の状態に戻す処理
