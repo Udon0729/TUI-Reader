@@ -48,7 +48,7 @@ pub fn run(terminal: &mut DefaultTerminal) -> color_eyre::Result<()> {
     let picker = Picker::from_query_stdio()?;
     let protocol_label = format!("{:?}", picker.protocol_type());
     let page = if picker.protocol_type() == ProtocolType::Kitty {
-        let source = document::load_png("assets/sample.png")?;
+        let source = document::render_first_page("assets/sample.pdf")?;
         let rendered = encode(&picker, &source, current_size(terminal)?)?;
         Some(PreparedImage {
             picker,

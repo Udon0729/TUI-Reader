@@ -12,3 +12,5 @@ ratatui = { version = "0.30.2", features = ["crossterm"] }
 # ターミナルの画像方式を問い合わせ、画像をその方式のデータへ変換するライブラリ
 ratatui-image = { version = "11.1.0", default-features = false, features = ["crossterm", "image-defaults"] }
 
+mupdf = { version = "0.8.0", default-features = false, features = ["base14-fonts", "system-fonts"] }
+
