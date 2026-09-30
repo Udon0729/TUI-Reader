@@ -18,7 +18,7 @@ jobs:
         with:
           persist-credentials: false
       - name: MuPDFのビルド依存をインストール
-        run: sudo apt-get update && sudo apt-get install -y build-essential clang libclang-dev pkg-config
+        run: sudo apt-get update && sudo apt-get install -y build-essential clang libclang-dev pkg-config libfontconfig1-dev
       - name: Rustを準備
         run: rustup toolchain install stable --profile minimal --component rustfmt --component clippy && rustup default stable
       - uses: actions/cache@0057852bfaa89a56745cba8c7296529d2fc39830 # v4

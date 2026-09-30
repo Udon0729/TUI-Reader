@@ -18,7 +18,7 @@ Rustのstableツールチェーンを用意する。MuPDFをビルドするた�
 
 ```sh
 sudo apt-get update
-sudo apt-get install -y build-essential clang libclang-dev pkg-config
+sudo apt-get install -y build-essential clang libclang-dev pkg-config libfontconfig1-dev
 ```
 
 表示したいPDFを`assets/sample.pdf`に置き、リポジトリのルートで実行する。PDFはリポジトリに含めていない。
