@@ -26,7 +26,7 @@ pub fn draw(frame: &mut Frame<'_>, app: &AppState) {
     } else {
         // Kitty方式でないときはテキストを表示
         let message = format!(
-            "画像方式は {} です。 Kitty方式のときは画像が表示されます。", 
+            "画像方式は {} です。 Kitty方式のときは画像が表示されます。",
             app.protocol_label()
         );
 
@@ -34,6 +34,8 @@ pub fn draw(frame: &mut Frame<'_>, app: &AppState) {
         frame.render_widget(paragraph, document_area);
     }
 
-    let chat_panel = Paragraph::new("チャット").block(Block::default().title("チャット欄").borders(Borders::ALL));
+    let chat_title = format!("チャット欄（{}語）", app.page_words().len());
+    let chat_panel = Paragraph::new(app.page_text())
+        .block(Block::default().title(chat_title).borders(Borders::ALL));
     frame.render_widget(chat_panel, chat_area);
 }
