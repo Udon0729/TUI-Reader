@@ -4,3 +4,6 @@
 .DS_Store
 .env
 .env.*
+/docs/
+/AGENTS.md
+/.github/codex/
